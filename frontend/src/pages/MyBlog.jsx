@@ -7,7 +7,7 @@ import BlogList from "../Component/BlogList";
 import BlogModal from "../Component/BlogModal";
 import SideBar from "../Component/Sidebar";
 import { useLocation, useNavigate } from "react-router-dom";
-
+import Blog2 from "../Component/Blog";
 const HomePage = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [title, setTitle] = useState("");
@@ -157,7 +157,7 @@ const HomePage = () => {
       </div>
 
       {activeBlog && (
-        <Blog
+        <Blog2
           activeBlog={activeBlog}
           setActiveBlog={setActiveBlog}
           editOption={editOption}
