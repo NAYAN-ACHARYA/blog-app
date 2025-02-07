@@ -15,7 +15,7 @@ function Login() {
     e.preventDefault();
 
     try {
-      const response = await axios.post('http://localhost:5000/api/login', {email, password });
+      const response = await axios.post('https://blog-app-0459.onrender.com/api/login', {email, password });
 
       // Redirect to HomePage if login is successful
       setMessage(response.data.message);

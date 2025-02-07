@@ -15,7 +15,7 @@ function SignUp() {
     e.preventDefault();
 
     try {
-      const response = await axios.post('http://localhost:5000/api/signup', { username,email,password });
+      const response = await axios.post('https://blog-app-0459.onrender.com/api/signup', { username,email,password });
 
       // Redirect to HomePage if login is successful
       alert(response.data.message);

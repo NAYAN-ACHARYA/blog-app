@@ -33,7 +33,7 @@ const HomePage = () => {
 
     const fetchBlogs = async () => {
       try {
-        const response = await axios.get("http://localhost:5000/api/userblogs", {
+        const response = await axios.get("https://blog-app-0459.onrender.com/api/userblogs", {
           params: { email: email },
         });
         setBlogs(response.data);
@@ -95,7 +95,7 @@ const HomePage = () => {
 
     try {
       const response = await axios.post(
-        "http://localhost:5000/api/upload",
+        "https://blog-app-0459.onrender.com/api/upload",
         formData,
         {
           headers: { "Content-Type": "multipart/form-data" },
@@ -106,7 +106,7 @@ const HomePage = () => {
       closeModal();
 
       // Fetch updated blogs
-      const updatedBlogs = await axios.get("http://localhost:5000/api/userblogs", {
+      const updatedBlogs = await axios.get("https://blog-app-0459.onrender.com/api/userblogs", {
         params: { email: email },
       });
       setBlogs(updatedBlogs.data);

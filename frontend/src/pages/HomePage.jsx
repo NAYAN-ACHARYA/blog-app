@@ -32,7 +32,7 @@ const HomePage = () => {
   useEffect(() => {
     const fetchBlogs = async () => {
       try {
-        const response = await axios.get("http://localhost:5000/api/blogs");
+        const response = await axios.get("https://blog-app-0459.onrender.com/api/blogs");
         setBlogs(response.data);
       } catch (error) {
         console.error("Error fetching blogs:", error);
@@ -98,7 +98,7 @@ const HomePage = () => {
 
     try {
       const response = await axios.post(
-        "http://localhost:5000/api/upload",
+        "https://blog-app-0459.onrender.com/api/upload",
         formData,
         {
           headers: { "Content-Type": "multipart/form-data" },
@@ -106,7 +106,7 @@ const HomePage = () => {
       );
       console.log(response.data.message);
       closeModal();
-      const updatedBlogs = await axios.get("http://localhost:5000/api/blogs");
+      const updatedBlogs = await axios.get("https://blog-app-0459.onrender.com/api/blogs");
       setBlogs(updatedBlogs.data);
     } catch (error) {
       const errorMessage =
