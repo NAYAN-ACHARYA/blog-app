@@ -7,7 +7,7 @@ import BlogList from "../Component/BlogList";
 import BlogModal from "../Component/BlogModal";
 import SideBar from "../Component/Sidebar";
 import { useLocation, useNavigate } from "react-router-dom";
-import Blog2 from "../Component/Blog";
+import Blog2 from "../Component/Blog2";
 const HomePage = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [title, setTitle] = useState("");
