@@ -3,7 +3,7 @@ import "../styles/Blog.css";
 import "../styles/BlogBox.css";
 import axios from "axios";
 //this file for myblogs
-const Blog = ({ activeBlog, setActiveBlog, editOption, setBlogs, blogs }) => {
+const Blog2 = ({ activeBlog, setActiveBlog, editOption, setBlogs, blogs }) => {
   const [editMode, setEditMode] = useState(0);
   const [localTitle, setLocalTitle] = useState(activeBlog.title || "");
   const [localDate, setLocalDate] = useState(activeBlog.date || "");
@@ -164,4 +164,4 @@ const Blog = ({ activeBlog, setActiveBlog, editOption, setBlogs, blogs }) => {
   );
 };
 
-export default Blog;
+export default Blog2;
