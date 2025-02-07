@@ -1,0 +1,104 @@
+.edit-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 12px;
+}
+
+.edit-btn:hover {
+  background-color: #0056b3;
+}
+
+/* Styling for the modal overlay */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+  }
+  
+  /* Modal container styling */
+  .modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    max-width: 600px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    z-index: 1001;
+    padding: 20px;
+    animation: fadeIn 0.3s ease-out;
+  }
+  
+  /* Modal header */
+  .modal h3 {
+    margin-bottom: 15px;
+    font-size: 24px;
+    color: #333;
+    text-align: center;
+  }
+  
+  /* Title container styling */
+  .title-input-container {
+    margin-bottom: 20px;
+  }
+  
+  .title-input {
+    font-size: 20px;
+    font-weight: bold;
+    color: #444;
+    border: none;
+    outline: none;
+    background: transparent;
+  }
+  
+  /* Date styling */
+  .modal div {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 10px;
+  }
+  
+  /* Image styling */
+  .modal img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 15px;
+  }
+  
+  /* Text container styling */
+  .textflex {
+    margin-top: 10px;
+  }
+  
+  .textflex p {
+    margin: 10px 0;
+    color: #555;
+    line-height: 1.5;
+  }
+  
+  /* Add animations for a smoother experience */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translate(-50%, -60%);
+    }
+    to {
+      opacity: 1;
+      transform: translate(-50%, -50%);
+    }
+  }
+  

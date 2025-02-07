@@ -1,0 +1,155 @@
+html, body {
+  margin: 0; /* Remove default margins */
+  padding: 0; /* Remove default padding */
+  min-height: 100%; /* Ensure it takes at least the full viewport height */
+  height: auto; /* Allow height to adjust dynamically */
+  box-sizing: border-box; /* Include padding and borders in dimensions */
+  background-color: rgb(255, 255, 255);
+}
+
+.amazon-logout-button {
+  background-color: #f0c14b; /* Amazon's signature yellow */
+  color: #111; /* Dark text for contrast */
+  border: 1px solid #a88734; /* Border with a subtle brown tint */
+  border-radius: 3px; /* Slightly rounded corners */
+  padding: 8px 16px; /* Compact padding */
+  font-size: 14px; /* Slightly smaller font size */
+  font-weight: bold; /* Bold text */
+  cursor: pointer; /* Pointer cursor for hover effect */
+  transition: background-color 0.2s ease, transform 0.1s ease; /* Smooth transitions */
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1); /* Light shadow */
+}
+
+.amazon-logout-button:hover {
+  background-color: #ddb347; /* Slightly darker yellow on hover */
+}
+
+.amazon-logout-button:active {
+  transform: translateY(1px); /* Button presses down slightly */
+  box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.2); /* Reduce shadow on click */
+}
+
+
+  /* Header */
+  .header {
+    background-color: rgb(255, 255, 255);
+    color: #0288d1;
+    padding: 1rem;
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+    border-bottom: 2px solid #e0e0e0;
+    font-family: 'Georgia', serif;
+    text-shadow: 1px 1px 2px #b3e5fc;
+    position: relative;
+    top:0;
+    /* margin-bottom: 10px; */
+  }
+
+  /* Plus Button */
+  .plus-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 60px;
+    height: 60px;
+    background-color: #0288d1;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    font-size: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+
+  .plus-button:hover {
+    background-color: #0277bd;
+  }
+
+  /* Add margin to content below the fixed header */
+.blog-list {
+  margin-top: 70px; /* Match the height of the header-parent */
+  padding: 10px;
+  display: flex;
+  flex-wrap: wrap; /* Allow items to wrap to the next line */
+  gap: 45px; /* Add spacing between cards */
+  justify-content: center; /* Center the cards in the row */
+  overflow-y: auto;
+  width: 1350px;
+}
+
+
+
+.blog-item {
+    flex: 0 1 40%; /* Each card takes 25% of the container width */
+    width: 25%; /* Ensure cards do not grow beyond 25% */
+    box-sizing: border-box; /* Include padding and border in width */
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column; /* Stack content vertically */
+    align-items: flex-start; /* Align items to the left */
+}
+
+ .blog-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+  }
+  
+  .blog-item p {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #333;
+    margin-top: 10px; /* Space between image and title */
+    margin-bottom: 0; /* No bottom margin */
+    width: 100%; /* Ensure the title takes the full width of the card */
+    text-align: left; /* Align text to the left */
+  }
+  
+  .blog-item img {
+    width: 100%; /* Make the image width 100% of the card */
+    max-height: 300px; /* Max height to constrain image size */
+    object-fit: cover; /* Maintain aspect ratio while filling the space */
+    border-radius: 8px;
+  }
+  
+
+  .single-line-text {
+    font-size: 1rem;
+    color: #333;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 100%;
+}
+
+
+.header-parent {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1000;
+  height: 96px; /* Fixed header height */
+  position: fixed; /* Sticks to the top */
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #fff; /* Ensure it stands out */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+}
+
+.boody {
+  padding-top: 96px; /* Same as header height */
+  padding: 60px; /* Additional padding for spacing */
+  box-sizing: border-box; /* Ensure padding is included in dimensions */
+}
+

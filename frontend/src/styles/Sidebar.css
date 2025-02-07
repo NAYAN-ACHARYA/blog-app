@@ -1,0 +1,81 @@
+/* Sidebar container */
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: -330px; /* Start off-screen */
+    height: 100%;
+    width: 330px; /* Sidebar width */
+    background-color: #e3f2fd; /* Light blue background */
+    color: #0d47a1; /* Dark blue text */
+    overflow-x: hidden;
+    transition: left 0.3s ease; /* Smooth sliding animation */
+    padding-top: 60px; /* Space for header or other content */
+    z-index: 1000;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
+  }
+  
+  .sidebar.open {
+    left: 0; /* Slide into view */
+  }
+  
+  /* Sidebar button group */
+  .button-group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+  }
+  
+  .sidebar-btn {
+    margin: 15px 0; /* Add more spacing between buttons */
+    padding: 15px 25px; /* Increase button size */
+    background-color: #bbdefb; /* Light blue button background */
+    color: #0d47a1; /* Dark blue text */
+    border: 2px solid #90caf9; /* Slightly thicker border */
+    border-radius: 8px; /* Rounded corners for a modern look */
+    font-size: 18px; /* Larger font size for better readability */
+    font-weight: bold; /* Make text bold */
+    cursor: pointer;
+    box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    width: 90%; /* Wider buttons, nearly full width */
+    text-align: center; /* Center-align text */
+  }
+  
+  .sidebar-btn:hover {
+    background-color: #90caf9; /* Darker blue on hover */
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+    color: #ffffff; /* Change text color to white on hover for contrast */
+  }
+  
+  
+  /* Toggle button */
+  .toggle-btn {
+    top: 20px;
+    left: 20px;
+    z-index: 1100;
+    padding: 10px 20px;
+    background-color: #1976d2; /* Blue background */
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  .toggle-btn:hover {
+    background-color: #1565c0; /* Slightly darker blue */
+    transition: background-color 0.3s;
+  }
+  
+  /* Overlay */
+  .overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay */
+    z-index: 900;
+  }
+  
