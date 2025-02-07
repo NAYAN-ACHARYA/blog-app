@@ -18,7 +18,7 @@ const Blog = ({ activeBlog, setActiveBlog, editOption, setBlogs, blogs }) => {
   useEffect(() => {
     const fetchBlogs = async () => {
       try {
-        const response = await axios.get("https://blog-app-0459.onrender.com/api/userblogs", { params: { email: localEmail } });
+        const response = await axios.get("https://blog-app-0459.onrender.com/api/blogs", { params: { email: localEmail } });
         setBlogs(response.data);
       } catch (error) {
         console.error("Error fetching blogs:", error);
@@ -59,7 +59,7 @@ const Blog = ({ activeBlog, setActiveBlog, editOption, setBlogs, blogs }) => {
         headers: { "Content-Type": "multipart/form-data" },
       });
       setActiveBlog(null);
-      const updatedBlogs = await axios.get("https://blog-app-0459.onrender.com/api/userblogs", { params: { email: localEmail } });
+      const updatedBlogs = await axios.get("https://blog-app-0459.onrender.com/api/blogs", { params: { email: localEmail } });
       setBlogs(updatedBlogs.data);
     } catch (error) {
       setErrorMessage(error.response?.data?.message || "Error updating blog");
